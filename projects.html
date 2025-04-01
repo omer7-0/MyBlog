@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Projelerim</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background-color: #1e293b;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .project-card:hover {
+      transform: scale(1.02);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .project-info {
+      padding: 15px;
+    }
+
+    .project-info h3 {
+      margin-bottom: 10px;
+      color: #f1f5f9;
+    }
+
+    .project-description {
+      display: none;
+      padding-top: 10px;
+      font-size: 14px;
+      color: #cbd5e1;
+    }
+
+    .project-card.active .project-description {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="img/profil.jpg" alt="Profil Fotoğrafı" class="profile-pic">
+    <h2>Ömer Şenses</h2>
+    <nav>
+      <a href="home.html">Ana Sayfa</a>
+      <a href="about.html">Hakkımda</a>
+      <a href="education.html">Eğitim</a>
+      <a href="projects.html" class="active">Projeler</a>
+      <a href="contact.html">İletişim</a>
+    </nav>
+  </div>
+
+  <!-- Ana İçerik -->
+  <main>
+    <h1>Projelerim</h1>
+
+    <div class="projects-container">
+
+      <!-- Proje 1 -->
+      <div class="project-card" onclick="toggleDescription(this)">
+        <div class="project-info">
+          <h3>Dressing Game</h3>
+          <div class="project-description">
+            Bilig Opex firması için tasarlanan bu 2 boyutlu eğitici oyunda, iş güvenliği kurallarına uygun şekilde giyinme eğitimi verilmektedir. Oyuncular, iş ortamına uygun kıyafet ve ekipmanları seçerek doğru kombinasyonları oluşturur. Eğlenceli bir arayüzle, güvenlik bilinci oyunlaştırılarak kazandırılır.
+          </div>
+        </div>
+      </div>
+
+      <!-- Proje 2 -->
+      <div class="project-card" onclick="toggleDescription(this)">
+        <div class="project-info">
+          <h3>Escape</h3>
+          <div class="project-description">
+            Unity oyun motoruyla geliştirilmiş bu 3 boyutlu oyunda, oyuncu kutulardan kaçarak hayatta kalmaya çalışır. Hız, dikkat ve refleks gerektiren bu kaçış oyunu, minimalist bir tasarıma sahip olup bağımlılık yapacak bir oynanış sunar.
+          </div>
+        </div>
+      </div>
+
+      <!-- Proje 3 -->
+      <div class="project-card" onclick="toggleDescription(this)">
+        <div class="project-info">
+          <h3>Runner Coffe</h3>
+          <div class="project-description">
+            Sonsuz koşu (endless runner) tarzında tasarlanmış bu oyunda, oyuncu kahveleri toplayarak puan kazanır. Yol boyunca çıkan engellerden kaçınarak yüksek skor hedeflenir. Renkli grafikler ve akıcı kontroller ile mobil cihazlara uygundur.
+          </div>
+        </div>
+      </div>
+
+      <!-- Proje 4 -->
+      <div class="project-card" onclick="toggleDescription(this)">
+        <div class="project-info">
+          <h3>Araç Kiralama Otomasyonu</h3>
+          <div class="project-description">
+            Windows Forms ile geliştirilmiş bu masaüstü uygulaması, araç kiralama süreçlerini kolaylaştırmak için hazırlanmıştır. Müşteri kayıtları, araç takibi, kiralama işlemleri gibi birçok işlemi kullanıcı dostu arayüzle yönetme imkanı sağlar.
+          </div>
+        </div>
+      </div>
+
+      <!-- Proje 5 -->
+      <div class="project-card" onclick="toggleDescription(this)">
+        <div class="project-info">
+          <h3>Kolombiya Cumhuriyeti Web Sitesi</h3>
+          <div class="project-description">
+            Kolombiya hakkında bilgi veren, tanıtıcı bir web sitesi projesidir. Ülkenin coğrafi, kültürel ve tarihî bilgileri sunulmaktadır. Tasarımı kullanıcı dostudur ve içerik dinamik olarak API kullanılarak güncellenebilir şekilde yapılandırılmıştır.
+          </div>
+        </div>
+      </div>
+      <!-- Proje 6 -->
+<div class="project-card" onclick="toggleDescription(this)">
+  <div class="project-info">
+    <h3>Zombie Escape</h3>
+    <div class="project-description">
+      Karanlık bir şehirde geçen bu 3 boyutlu oyunda, oyuncu zombilerden kaçarak hayatta kalmaya çalışır. Unity kullanılarak geliştirilmiştir. Oyunda süreye karşı yarış, çeşitli haritalar ve güçlendirici eşyalar yer alır. Gerilim dolu atmosferi ve basit kontrolleri ile dikkat çeken bir kaçış oyunudur.
+    </div>
+  </div>
+</div>
+
+      
+
+    </div>
+
+    <footer>
+      © 2025 Ömer Şenses 
+    </footer>
+  </main>
+
+  <script>
+    function toggleDescription(card) {
+      card.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
